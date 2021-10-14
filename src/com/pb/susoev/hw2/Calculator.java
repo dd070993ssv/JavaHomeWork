@@ -7,14 +7,14 @@ public class Calculator {
         Scanner scan=new Scanner(System.in);
 
         int operand1 = 0;
-       int operand2 = 0;
+        int operand2 = 0;
         String sign;
-      int rezult;
+        int rezult;
 
         System.out.println("введите цифру №1");
-       try {
-           operand1=scan.nextInt();
-       }
+        try {
+            operand1=scan.nextInt();
+        }
         catch (Exception ex1){
             System.out.println("Это не цифра");
             return;
@@ -42,7 +42,7 @@ public class Calculator {
             case "+":
                 rezult=operand1+operand2;
                 System.out.println("Результат="+rezult);
-            break;
+                break;
             case "-":
                 rezult=operand1-operand2;
                 System.out.println("Результат="+rezult);
@@ -52,13 +52,13 @@ public class Calculator {
                 System.out.println("Результат="+rezult);
                 break;
             case "/":
-          try {
-              rezult=operand1/operand2;
-          }
-          catch (ArithmeticException ex3 ) {
-              System.out.println("Ошибка деления на 0");
-              return;
-          }
+                try {
+                    rezult=operand1/operand2;
+                }
+                catch (ArithmeticException ex3 ) {
+                    System.out.println("Ошибка деления на 0");
+                    return;
+                }
                 System.out.println("Результат="+rezult);
                 break;
             default: System.out.println("ошибка ввода знака");
