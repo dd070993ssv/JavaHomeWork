@@ -21,7 +21,7 @@ public class Array {
                 for (int i = 0; i < array.length; i++) {
                     mas = input.next();
                     array[i] = Integer.parseInt(mas.trim());
-                   w=false;}continue;
+                   w=false;}
             } catch (Exception ex1) {
                 System.out.println("Неверно введенный масив");
                 continue;
