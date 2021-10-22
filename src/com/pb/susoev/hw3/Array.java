@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Array {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int[] array = new int[5];
+        int[] array = new int[10];
         int[] array2 = array;
         int sum = 0;
         int count=0;
