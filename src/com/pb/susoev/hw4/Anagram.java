@@ -13,10 +13,10 @@ public class Anagram {
         char[] str1 = scan.nextLine().toCharArray();
         int count=0;
         int count1=0;
-      //  char[] s = "fdds".toCharArray();
+        //  char[] s = "fdds".toCharArray();
         //char[] s1 = "cda".toCharArray();
-       // String s= "fdd";
-       // String s1= "dsf";
+        // String s= "fdd";
+        // String s1= "dsf";
 //проверка на знаки припинания строки2
         for(int i = 0; i < str.length; i++) {
             if (str[i] != '!') {
@@ -26,12 +26,12 @@ public class Anagram {
                             if (str[i] != ','){
                                 if (str[i] != ';') {
                                     count++;
+                                }
                             }
                         }
                     }
                 }
             }
-        }
         }
 //проверка на знаки припинания строки1
         for(int j = 0; j < str1.length; j++) {
@@ -56,7 +56,7 @@ public class Anagram {
         //    substring(s, i){
         {
             System.out.println("True");
-    }
+        }
         char[] bukovky = new char[count];
         int buk_iter=0;
 
@@ -101,7 +101,7 @@ public class Anagram {
 
 
 
-       //if (s.length()!=s1.length()) System.out.println("False"); else System.out.println("True");
+        //if (s.length()!=s1.length()) System.out.println("False"); else System.out.println("True");
        /* for(int i = 0; i < Math.min(s.length, s1.length); i++){
             if(s[i] != s1[i]){
                 System.out.println("строка 1 символ" + i + " " + s[i] + "-->" + "строка 2 символ" + i + " " + s1[i]);
@@ -113,8 +113,6 @@ public class Anagram {
             }
         }
     }
-
-
     private static String substring(char[] s1, int i) {
         String s = "";
         for(int a = i; a < s1.length; a++){
