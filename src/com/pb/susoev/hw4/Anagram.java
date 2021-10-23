@@ -95,29 +95,5 @@ public class Anagram {
 
 
         }
-
-
-
-
-
-
-        //if (s.length()!=s1.length()) System.out.println("False"); else System.out.println("True");
-       /* for(int i = 0; i < Math.min(s.length, s1.length); i++){
-            if(s[i] != s1[i]){
-                System.out.println("строка 1 символ" + i + " " + s[i] + "-->" + "строка 2 символ" + i + " " + s1[i]);
-            }
-            if(i == Math.min(s.length, s1.length) - 1){
-                i++;
-                System.out.println(s.length > i ? ("строка 1 субстрока" + substring(s, i) + "строка 2 NON")
-                        : ("строка 2 субстрока" + substring(s1, i) + "строка 1 NON"));
-            }
-        }
-    }
-    private static String substring(char[] s1, int i) {
-        String s = "";
-        for(int a = i; a < s1.length; a++){
-            s += s1[a];
-        }
-        return s;*/
     }
 }
