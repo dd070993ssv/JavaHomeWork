@@ -2,78 +2,47 @@ package com.pb.susoev.hw4;
 
 import java.util.Scanner;
 
-import static jdk.nashorn.internal.objects.NativeString.substring;
-
 public class Anagram {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введи 1");
+        System.out.println("Введи строку №1");
         char[] str = scan.nextLine().toCharArray();
-        System.out.println("Введи 2");
+        System.out.println("Введи строку №2");
         char[] str1 = scan.nextLine().toCharArray();
         int count=0;
         int count1=0;
-        //  char[] s = "fdds".toCharArray();
-        //char[] s1 = "cda".toCharArray();
-        // String s= "fdd";
-        // String s1= "dsf";
-//проверка на знаки припинания строки2
+        //Проверка на знаки припинания в строке
         for(int i = 0; i < str.length; i++) {
-            if (str[i] != '!') {
-                if (str[i] != '/') {
-                    if (str[i] != '.'){
-                        if (str[i] != '?'){
-                            if (str[i] != ','){
-                                if (str[i] != ';') {
-                                    count++;
-                                }
-                            }
-                        }
-                    }
-                }
+            char buk = str[i];
+            if(Character.isLetter(buk)){
+                count++;
             }
         }
-//проверка на знаки припинания строки1
+        //Проверка на знаки припинания в строке1
         for(int j = 0; j < str1.length; j++) {
-            if (str1[j] != '!') {
-                if (str1[j] != '/') {
-                    if (str1[j] != '.'){
-                        if (str1[j] != '?'){
-                            if (str1[j] != ','){
-                                if (str1[j] != ';') {
-                                    count1++;
-                                }
-                            }
-                        }
-                    }
-                }
+            char buk = str1[j];
+            if(Character.isLetter(buk)){
+                count1++;
             }
         }
         //проверка длины длины строки с длиной строки1
-        if  (count != count1) {System.out.println("False");
-        }
-        else
-        //    substring(s, i){
-        {
-            System.out.println("True");
-        }
-        char[] bukovky = new char[count];
+        if  (count != count1) {
+            System.out.println("False");
+        } else {
+
+        char[] mas_bukv = new char[count];
         int buk_iter=0;
-
         for(int i =0;i<count;i++){
-
             char pin=str[i];
-
             if(!Character.isLetter(pin)){
                 continue;
             }
 
-            if(!bukovky.equals(pin)){
-                bukovky[buk_iter]=pin;
+            if(!mas_bukv.equals(pin)){
+                mas_bukv[buk_iter]=pin;
                 buk_iter++;
                 int countStr=0;
                 int countStr1=0;
-
                 for(int y=0;y<str.length;y++){
                     if(str[y]==pin){
                         countStr++;
@@ -86,14 +55,11 @@ public class Anagram {
                 }
                 if(countStr==countStr1){
                 }else{
-                    System.out.println("PIZDEC");
+                    System.out.println("False");
                     return;
                 }
-
-
             }
-
-
         }
+        System.out.println("True");
     }
-}
+}}
