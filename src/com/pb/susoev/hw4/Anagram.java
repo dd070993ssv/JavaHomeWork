@@ -32,6 +32,7 @@ public class Anagram {
 
         char[] mas_bukv = new char[count];
         int buk_iter=0;
+        //проверка буквы на количество вхождений в строке
         for(int i =0;i<count;i++){
             char pin=str[i];
             if(!Character.isLetter(pin)){
