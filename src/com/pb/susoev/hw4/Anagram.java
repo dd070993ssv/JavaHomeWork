@@ -11,7 +11,7 @@ public class Anagram {
         char[] str1 = scan.nextLine().toCharArray();
         int count=0;
         int count1=0;
-        //Проверка на знаки припинания в строке
+        /*//Проверка на знаки припинания в строке
         for(int i = 0; i < str.length; i++) {
             char buk = str[i];
             if(Character.isLetter(buk)){
@@ -24,7 +24,12 @@ public class Anagram {
             if(Character.isLetter(buk)){
                 count1++;
             }
-        }
+        }*/
+
+        //Проверка на знаки припинания в строке
+        count = getCount(str, count);
+        //Проверка на знаки припинания в строке1
+        count1 = getCount(str1, count1);
         //проверка длины длины строки с длиной строки1
         if  (count != count1) {
             System.out.println("False");
@@ -63,4 +68,15 @@ public class Anagram {
         }
         System.out.println("True");
     }
-}}
+}
+
+    private static int getCount(char[] str, int count) {
+        for (int i = 0; i < str.length; i++) {
+            char buk = str[i];
+            if (Character.isLetter(buk)) {
+                count++;
+            }
+        }
+        return count;
+    }
+}
