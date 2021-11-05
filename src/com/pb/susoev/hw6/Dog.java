@@ -1,36 +1,36 @@
 package com.pb.susoev.hw6;
 
-import com.pb.susoev.hw5.Book;
-import javafx.scene.AmbientLight;
+
+import java.util.Objects;
 
 public class Dog extends Animal{
-String nameAnimal;
+//String nameAnimal;
 
-    @Override
-    public String getNameAnimal() {
-        return nameAnimal;
-    }
-
-    @Override
-    public void setNameAnimal(String nameAnimal) {
-        this.nameAnimal = nameAnimal;
-    }
-
-    public Dog(String nameAnimal,String food) {
-        this.nameAnimal=nameAnimal;
+    public Dog(String nameAnimal,String food,String location) {
+        super.setNameAnimal(nameAnimal);
         super.setFood(food);
+        super.setLocation(location);
     }
 
     public Dog() {
         super();
     }
-
-
-//ublic Dog (String nameAnimal){
-   //  this.nameAnimal=nameAnimal;
-//}
-
+@Override
     public void makeNoise() {
-        System.out.println(" гав-гав");
+        System.out.println(getNameAnimal()+" гав-гав");
     }
+
+    @Override
+    public void eat() {
+        System.out.println(getNameAnimal()+" кушает "+ getFood());
+    }
+    @Override
+    public String toString() {
+        return getNameAnimal() + " прыгает";
+    }
+    @Override
+    public int hashCode(){
+        return Objects.hash(getNameAnimal());
+    }
+
 }

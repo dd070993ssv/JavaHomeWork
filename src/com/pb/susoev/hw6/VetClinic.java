@@ -4,9 +4,10 @@ package com.pb.susoev.hw6;
 
 public class VetClinic {
     public static void main(String[] args) {
-      Animal [] animals = {new Dog("dog","кость"),
-              new Cat("cat"),
-              new Horse("horse")};
+      Animal [] animals = {new Dog("dog","кость","дома"),
+              new Cat("cat","мясо","мусорка"),
+              new Horse("horse","сено","в плугу")};
+              //new Animal("horse","сено")};
 
         // Animal [] animals= new Animal[1];
        //  Dog dog = new Dog("dog");

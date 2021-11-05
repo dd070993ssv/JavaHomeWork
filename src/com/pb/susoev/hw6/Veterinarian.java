@@ -7,8 +7,14 @@ public class Veterinarian {
     }
 
     public void treatAnimal (Animal  animal){
-        System.out.print(animal.getNameAnimal() + " "+animal.getFood());
+       System.out.println(animal.getNameAnimal()+ " "+animal.getLocation());
         animal.makeNoise();
+        animal.sleep();
+        animal.eat();
+        System.out.println(animal.toString());
+        System.out.println("hashCode : " + animal.hashCode());
+
      }
+
     }
 

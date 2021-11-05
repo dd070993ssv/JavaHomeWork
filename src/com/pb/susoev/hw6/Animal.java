@@ -17,13 +17,6 @@ public class Animal {
     }
 
 
-
-    public Animal(String nameAnimal) {
-        //System.out.println(this.nameAnimal);
-        this.nameAnimal = nameAnimal;
-
-    }
-
     public String getFood() {
         return food;
     }
@@ -41,7 +34,7 @@ public class Animal {
     }
 
     public void makeNoise (){
-
+        System.out.println("jcnfkmyjt");
 
     }
 
@@ -50,6 +43,6 @@ public class Animal {
     }
 
     public void sleep (){
-        System.out.println("Делает что то");
+        System.out.println(nameAnimal+" спит");
     }
 }
