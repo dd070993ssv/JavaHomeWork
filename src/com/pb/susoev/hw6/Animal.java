@@ -1,11 +1,21 @@
 package com.pb.susoev.hw6;
 
+import java.util.Objects;
+
 public class Animal {
+    private String nameAnimal;
     private String food ;
     private String location;
-    private String nameAnimal;
+
 
     public Animal() {
+
+    }
+
+    public Animal( String nameAnimal,String food, String location) {
+        this.nameAnimal = nameAnimal;
+        this.food = food;
+        this.location = location;
 
     }
 
@@ -15,7 +25,6 @@ public class Animal {
     public String getNameAnimal() {
         return this.nameAnimal;
     }
-
 
     public String getFood() {
         return food;
@@ -33,16 +42,20 @@ public class Animal {
         this.location = location;
     }
 
-    public void makeNoise (){
-        System.out.println("jcnfkmyjt");
+    public void makeNoise (){}
 
+    public void eat() {}
+
+    public void sleep (){}
+
+    public String toString() {
+        return getNameAnimal() + " лежит";
     }
 
-    public void eat() {
-
+    public int hashCode(){
+        return Objects.hash(getNameAnimal());
     }
 
-    public void sleep (){
-        System.out.println(nameAnimal+" спит");
-    }
+    public boolean equals () { return  equals(getNameAnimal());}
+
 }

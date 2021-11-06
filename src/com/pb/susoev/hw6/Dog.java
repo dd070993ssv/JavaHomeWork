@@ -9,17 +9,16 @@ public class Dog extends Animal{
     public Dog(String nameAnimal,String food,String location) {
         super.setNameAnimal(nameAnimal);
         super.setFood(food);
-        super.setLocation(location);
+        super.setLocation("живет "+location);
     }
 
     public Dog() {
         super();
     }
-@Override
+    @Override
     public void makeNoise() {
-        System.out.println(getNameAnimal()+" гав-гав");
+        System.out.println(getNameAnimal()+" делаеет гав-гав");
     }
-
     @Override
     public void eat() {
         System.out.println(getNameAnimal()+" кушает "+ getFood());
@@ -32,5 +31,7 @@ public class Dog extends Animal{
     public int hashCode(){
         return Objects.hash(getNameAnimal());
     }
+
+    public boolean equals () { return  equals(getNameAnimal());}
 
 }

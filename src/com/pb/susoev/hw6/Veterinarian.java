@@ -11,8 +11,10 @@ public class Veterinarian {
         animal.makeNoise();
         animal.sleep();
         animal.eat();
-        System.out.println(animal.toString());
+        System.out.println("toString : "+animal.toString());
         System.out.println("hashCode : " + animal.hashCode());
+        System.out.println("equals : " + animal.equals(animal));
+
 
      }
 
